@@ -17,14 +17,15 @@ function Header({ cart }) {
         <div className="flex items-center justify-between py-3 max-w-[1120px] mx-auto text-white">
           <div className="flex items-center gap-3">
             <a href="tel:090000000" className="flex gap-1 items-center">
-              <MdIcons.MdOutlinePhone /> 090 000 000
+              <MdIcons.MdOutlinePhone />
+              <span className="max-md:hidden">090 000 000</span>
             </a>
             <a
               href="mailto:ajayimichael@gmail.com"
               className="flex gap-1 items-center"
             >
               <MdIcons.MdMail />
-              Moheen@gmail.com
+              <span className="max-md:hidden">Moheen@gmail.com</span>
             </a>
           </div>
           <div className="flex items-center gap-3 text-xl">
@@ -42,7 +43,7 @@ function Header({ cart }) {
       </nav>
       <nav className="flex items-center justify-between py-3 max-lg:px-6 lg:max-w-[1120px] mx-auto bg-white">
         <img src={Logo} alt="Moheen Collection" />
-        <nav className="flex items-center gap-4">
+        <nav className="flex items-center gap-4 max-md:hidden">
           {navLinks.map((link, id) => (
             <div key={id + link.name} className="cursor-pointer">
               {link.name}
